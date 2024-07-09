@@ -11,7 +11,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Hello Nicholas, did you pass?"
+                python hello_nick.py
+		echo "did that work? success!"
             }
         }
         stage('Deliver') {
