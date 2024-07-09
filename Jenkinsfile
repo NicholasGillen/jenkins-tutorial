@@ -1,26 +1,18 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:20.15.0-alpine3.20' }
+    }
+	
     stages {
-        stage('Build') {
-            steps {
-                echo "Building.."
-                sh '''
-                echo "doing build stuff.."
-                '''
-            }
-        }
+	stage('Build') {
+	    steps {
+		sh 'Nick added this'
+	    }
+	}
+    stages {
         stage('Test') {
             steps {
-                python hello_nick.py
-		echo "did that work? success!"
-            }
-        }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
+                sh 'node --version'
             }
         }
     }
