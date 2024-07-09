@@ -9,7 +9,6 @@ pipeline {
 		sh 'Nick added this'
 	    }
 	}
-    stages {
         stage('Test') {
             steps {
                 sh 'node --version'
